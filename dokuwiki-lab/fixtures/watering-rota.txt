@@ -1,0 +1,15 @@
+====== The Watering Rota ======
+
+Water early, before the heat of the day. One full can per bed, two for tomatoes, three in a heat wave.
+
+  * Monday — Amara
+  * Wednesday — Ben
+  * Friday — Priya
+  * Sunday — whoever is passing
+
+If rain is forecast, skip the day and note it in the
+[[gardening:season-notes|season notes]].
+
+<file>
+Rain gauge reading on Sunday decides Monday.
+</file>

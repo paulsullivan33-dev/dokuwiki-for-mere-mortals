@@ -1,0 +1,12 @@
+$ # Settings come in layers: conf/dokuwiki.php ships the defaults,
+$ # conf/local.php (yours) overrides them. One setting in each layer:
+$conf['title']       = 'DokuWiki';        //what to show in the title
+$conf['title'] = 'Elm Street Community Garden Wiki';
+$ # Change the title in local.php -- the same file the admin Configuration Manager writes:
+$conf['title'] = 'Garden Wiki (renamed in the lab)';
+$ # Every page head now carries the new name:
+<title>start [Garden Wiki (renamed in the lab)]
+$ # The Configuration Manager screen shows the same value in its form (proof it is the same store):
+value="Garden Wiki (renamed in the lab)"
+$ # Put the proper title back:
+<title>start [Elm Street Community Garden Wiki]

@@ -1,0 +1,13 @@
+$ # Upload an image through the media manager form itself (multipart POST, admin session)
+$ curl -s -b cookies-admin.txt -F sectok=<token> -F ns=garden -F upload=@garden-sign.png \
+#        http://127.0.0.1:18092/lib/exe/mediamanager.php | grep -o "garden-sign.png"
+garden-sign.png
+garden-sign.png
+$ ls -la wiki/data/media/garden/
+total 4
+drwxr-xr-x 1 root root  30 Nov  3 01:25 .
+drwxr-xr-x 1 root root  20 Nov  3 01:25 ..
+-rw-r--r-- 1 root root 253 Nov  3 01:25 garden-sign.png
+$ # Fetch the stored file back through the wiki fetch handler
+$ # (path-style URLs like fetch.php/media/... need URL rewriting on; the ?media= form is the default)
+fetch.php?media=garden:garden-sign.png -> 200 image/png 253 bytes

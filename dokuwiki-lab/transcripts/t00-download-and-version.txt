@@ -1,0 +1,53 @@
+$ # Download the official stable tarball from download.dokuwiki.org
+$ curl -sSL -o dokuwiki-stable.tgz https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz
+$ sha256sum dokuwiki-stable.tgz
+7e9b4dcb5ecb91a57f71b9b77dcec7bcf929959881464796611349ed1d183176  dokuwiki-stable.tgz
+$ cat wiki/VERSION   # after: tar xzf dokuwiki-stable.tgz
+2026-07-14c "Mort"
+$ php --version | head -1
+PHP 8.3.6 (cli) (built: Oct 19 2026 15:16:58) (NTS)
+$ ls wiki/
+COPYING
+README
+SECURITY.md
+VERSION
+bin
+conf
+data
+doku.php
+feed.php
+inc
+index.php
+install.php
+lib
+vendor
+$ ls wiki/bin/     # command-line tools shipped in the release
+dwpage.php
+gittool.php
+indexer.php
+plugin.php
+render.php
+striplangs.php
+wantedpages.php
+$ ls wiki/lib/plugins/   # bundled plugins
+acl
+action.php
+admin.php
+auth.php
+authad
+authldap
+authpdo
+authplain
+cli.php
+config
+extension
+index.html
+info
+logviewer
+popularity
+remote.php
+revert
+safefnrecode
+styling
+syntax.php
+usermanager

@@ -1,0 +1,17 @@
+$ # A strikethrough first written as ~~text~~ came back unrendered (Markdown habit, wrong here):
+$ # in DokuWiki you type the tag itself -- <del>text</del>. Corrected and re-saved:
+save gardening:syntax-tour -> HTTP 302
+$ # Proof from the rendered HTML of that page:
+$ curl -s ".../doku.php?id=gardening:syntax-tour" | grep -o ...
+<h1 class="sectionedit1" id="syntax_tour">Syntax Tour
+<h2 class="sectionedit2" id="lists">Lists
+<h2 class="sectionedit3" id="links_and_a_picture">Links and a Picture
+<h2 class="sectionedit4" id="a_table">A Table
+<del>struck through
+table elements: 1
+<img src="/lib/exe/fetch.php?w=120&amp;tok=70af4f&amp;media=garden:garden-sign.png" class="media" loading="lazy" title="The garden
+href="/doku.php?id=garden:watering-rota" class="wikilink1" title="garden:watering-rota" data-wiki-id="garden:watering-rota">watering rota
+<ol>
+class="fn">
+<blockquote>
+<hr />

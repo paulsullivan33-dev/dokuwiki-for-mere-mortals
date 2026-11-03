@@ -1,0 +1,31 @@
+$ # A page on disk IS the page file. Its full text:
+$ cat wiki/data/pages/gardening/season-notes.txt
+====== Season Notes ======
+
+Notes from the beds, newest first.
+
+===== Spring =====
+
+The compost heap by the fence was turned on the first dry weekend.
+Seedlings went out two weeks later than last year because of the cold
+snap, and the beans did not seem to mind.
+
+**Note.** Remember: the tap by the shed drips. Turn it fully off.
+$ # Edit the file directly on disk -- no browser, no wiki form:
+$ printf "..." >> wiki/data/pages/gardening/season-notes.txt
+$ # Ask the wiki for the page again:
+$ curl -s ".../doku.php?id=gardening:season-notes" | grep "shed lock"
+The shed lock was oiled on Saturday; it turns freely now.
+$ # The rest of the data/ folder, one line each:
+pages    9 files
+attic    7 files
+meta     14 files
+media    3 files
+cache    23 files
+index    2 files
+locks    2 files
+tmp      1 files
+$ ls wiki/data/attic/gardening/   # old revisions of pages live here, gzipped
+season-notes.1793669103.txt.gz
+syntax-tour.1793669155.txt.gz
+syntax-tour.1793669176.txt.gz

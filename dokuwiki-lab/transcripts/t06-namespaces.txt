@@ -1,0 +1,16 @@
+$ # A page two namespaces deep is just a longer name with colons:
+save garden:beds:bed-1 -> HTTP 302
+$ find wiki/data/pages/garden -type f | sort   # namespaces are folders, pages are files
+garden/beds/bed-1.txt
+garden/plot-map.txt
+garden/watering-rota.txt
+$ # The sitemap view the wiki itself offers (do=index), namespaces and pages:
+title="garden"
+title="garden:plot-map"
+title="garden:watering-rota"
+title="gardening"
+title="gardening:season-notes"
+title="gardening:syntax-tour"
+$ # A link to a page that does not exist yet renders in the other colour:
+$ curl -s ".../doku.php?id=garden:plot-map" | grep "bed-list"
+<a href="/doku.php?id=garden:bed-list" class="wikilink2" title="garden:bed-list" rel="nofollow" data-wiki-id="garden:bed-list">full bed list

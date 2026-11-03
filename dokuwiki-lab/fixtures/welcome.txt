@@ -1,0 +1,16 @@
+====== Welcome to the Garden Wiki ======
+
+This wiki keeps the shared knowledge of the **Elm Street Community Garden**:
+which beds are planted, when the watering happens, and what we learned
+last season.
+
+Anyone may read these pages. Members can sign in and edit.
+
+Start here:
+
+  * [[garden:plot-map|The plot map]] — who tends which bed
+  * [[garden:watering-rota|The watering rota]] — this week's turns
+  * [[gardening:season-notes|Season notes]] — what worked, what did not
+
+If a page does not exist yet, following its red link offers to create it.
+That is how this wiki grows.

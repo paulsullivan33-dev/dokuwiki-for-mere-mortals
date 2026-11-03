@@ -1,0 +1,26 @@
+$ # Log in as the admin the installer created (cookie session, curl):
+$ curl -s -c cookies-admin.txt  "http://127.0.0.1:18092/doku.php?id=start"          # pick up a session cookie
+$ curl -s -b cookies-admin.txt -X POST ".../doku.php?id=start" do=login u=admin p=<password>
+$ curl -s -b cookies-admin.txt  "http://127.0.0.1:18092/doku.php?id=start" | grep "Logged in as"
+Logged in as: <bdi>Wiki Administrator</bdi> (<bdi>admin</bdi>)
+$ # Save four pages with dokuwiki-lab/dw-edit.sh (GET edit form, POST it back, as a browser does)
+save start -> HTTP 302
+save garden:plot-map -> HTTP 302
+save garden:watering-rota -> HTTP 302
+save gardening:season-notes -> HTTP 302
+
+$ # The same pages, served back: title of each rendered page
+start                    start [Elm Street Community Garden Wiki]
+garden:plot-map          garden:plot-map [Elm Street Community Garden Wiki]
+garden:watering-rota     garden:watering-rota [Elm Street Community Garden Wiki]
+gardening:season-notes   gardening:season-notes [Elm Street Community Garden Wiki]
+
+$ find wiki/data/pages -name "*.txt" | sort   # every page is already a file on disk
+data/pages/garden/plot-map.txt
+data/pages/garden/watering-rota.txt
+data/pages/gardening/season-notes.txt
+data/pages/playground/playground.txt
+data/pages/start.txt
+dokuwiki.txt
+syntax.txt
+welcome.txt

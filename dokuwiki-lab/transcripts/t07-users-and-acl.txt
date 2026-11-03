@@ -1,0 +1,20 @@
+$ # Two more users were added with the admin User Manager (it writes conf/users.auth.php):
+$ sed "s/:.*:/:<hash>:/2" wiki/conf/users.auth.php
+
+admin:<password-hash>:Wiki Administrator:admin@example.com:admin,user
+priya:<password-hash>:Priya Nair:priya@example.com:user
+sana:<password-hash>:Sana Iqbal:sana@example.com:user,committee
+$ # A committee-only page was created, then two rules added to conf/acl.auth.php
+$ # (the same file the Access Control List manager screen reads and writes):
+committee:*	@ALL	0
+committee:*	@committee	8
+$ # The ACL manager screen, asked to show its rules afterwards, lists them:
+acl[committee:*][@ALL]
+acl[committee:*][@committee]
+$ # Now ask for committee:minutes as four different readers:
+anonymous      -> Permission Denied
+priya (member) -> Permission Denied
+sana (committee)-> Draft budget for next season
+admin          -> Draft budget for next season
+$ # ...and priya can still read the public pages:
+priya on start -> Welcome to the Garden Wiki

@@ -1,0 +1,9 @@
+$ # A complete backup of the wiki is two folders: data/ (pages, media, history) and conf/ (settings, users, rules)
+$ tar czf garden-wiki-backup.tgz -C wiki data conf
+$ tar tzf garden-wiki-backup.tgz | grep -E "pages/gardening/season-notes.txt|conf/users.auth.php|conf/acl.auth.php"
+data/pages/gardening/season-notes.txt
+conf/acl.auth.php.dist
+conf/users.auth.php.dist
+conf/users.auth.php
+conf/acl.auth.php
+143851 bytes, garden-wiki-backup.tgz

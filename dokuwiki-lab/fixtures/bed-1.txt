@@ -1,0 +1,5 @@
+====== Bed 1 — Tomatoes ======
+
+Keeper: Amara. Six tomato plants, staked in May.
+
+This page lives two namespaces deep: ''garden'' and inside it ''beds''.

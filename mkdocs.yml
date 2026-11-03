@@ -1,0 +1,29 @@
+site_name: DokuWiki for Mere Mortals
+site_description: A wiki your group can edit in the browser that keeps every page as a plain text file, with no database to run. Installing DokuWiki, writing pages in its syntax, organising them in namespaces, adding users and tested permissions, following the history of every page, and knowing its limits, with the privacy line stated plainly.
+site_url: https://paulsullivan33-dev.github.io/dokuwiki-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What DokuWiki Is: what-dokuwiki-is.md
+  - The Moving Parts: the-moving-parts.md
+  - Installing DokuWiki: installing-dokuwiki.md
+  - Your First Pages: your-first-pages.md
+  - Writing with DokuWiki Syntax: writing-with-dokuwiki-syntax.md
+  - Namespaces and Links: namespaces-and-links.md
+  - Pages Are Just Files: pages-are-just-files.md
+  - Media — Images and Files: media-images-and-files.md
+  - Users and Permissions: users-and-permissions.md
+  - Finding and Following Changes: finding-and-following-changes.md
+  - Settings and Plugins: settings-and-plugins.md
+  - Recipes: recipes.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

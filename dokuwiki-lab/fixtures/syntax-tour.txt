@@ -1,0 +1,56 @@
+====== Syntax Tour ======
+
+This page exists to show the writing system working. It has
+**bold**, //italic//, __underlined__ and ''monospace'' text, plus
+a word that is <del>struck through</del>.
+
+===== Lists =====
+
+Things a gardener carries:
+
+  * a fork
+  * a trowel
+    * the small one for seedlings
+  * string
+
+The order of the morning:
+
+  - unlock the shed
+  - check the rain gauge
+  - water what needs it
+
+===== Links and a Picture =====
+
+Inside the wiki: the [[garden:watering-rota|watering rota]].
+Outside: [[https://www.example.com/gardens|an example garden site]].
+By reference: [[wp>Compost|composting, on Wikipedia]].
+
+{{garden:garden-sign.png?120|The garden sign}}
+
+===== A Table =====
+
+^ When     ^ Who   ^ Job        ^
+| Monday   | Amara | Watering   |
+| Saturday | All   | Big dig    |
+
+===== Code, Quotes and Notes =====
+
+A file a machine could read:
+
+<file csv beds.csv>
+bed,keeper
+1,Amara
+2,Ben
+</file>
+
+And short code inline: ''$conf['title']'' is a setting.
+
+> Measure twice, cut once.
+> — workshop saying
+
+A claim that needs support.((Footnotes collect at the bottom of the page.))
+
+----
+
+The end.\\
+(This line broke on purpose.)

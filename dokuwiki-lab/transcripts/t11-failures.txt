@@ -1,0 +1,26 @@
+$ # 1. An anonymous visitor asks for the editor (do=edit) and never gets one:
+$ #    the response contains no editor box at all -- the wiki offers Log In instead.
+$ curl -s ".../doku.php?id=start&do=edit" | grep -c "wiki__text"     # the editor textarea
+0
+$ # 2. Edit conflict: Amara opens the plot map to edit; meanwhile the page is saved by someone else;
+$ #    her stale form is then submitted. DokuWiki refuses and says why:
+save garden:plot-map -> HTTP 302
+A newer version exists
+$ # (the plot map was restored to its proper text straight after, with the same helper)
+$ # 3. Deleting a page: empty its text completely and save.
+save scratchpad -> HTTP 302
+wiki/data/pages/scratchpad.txt
+save scratchpad -> HTTP 302
+ls: cannot access 'wiki/data/pages/scratchpad.txt': No such file or directory
+does not exist anymore 
+$ #    ...but its history is not gone: the last content sits in the attic.
+scratchpad.1793669365.txt.gz
+scratchpad.1793669366.txt.gz
+$ # 4. A broken settings file: one mistyped line in conf/local.php takes the wiki down.
+$ printf "\$conf['title'] = 'Broken title;" >> wiki/conf/local.php     (an unclosed quote)
+$ # (the first request or two can still succeed from the PHP opcode cache;
+$ #  within seconds the error is total)
+with the typo, the start page answers HTTP 500 and 0 bytes
+PHP Parse error: syntax error, unexpected string content "Broken title;" in .../wiki/conf/local.php on line 12
+$ # Restore the backup copy and the wiki is back, no restart needed:
+after restoring the backup copy: HTTP 200

@@ -1,0 +1,15 @@
+====== The Plot Map ======
+
+The garden has twelve raised beds in two rows. Each bed has a keeper
+who decides what goes into it.
+
+^ Bed ^ Keeper      ^ Main crop 2026 ^
+| 1   | Amara       | Tomatoes       |
+| 2   | Ben         | Beans          |
+| 3   | Priya       | Peppers        |
+| 4   | //shared//  | Herbs          |
+
+Beds 5 to 12 are listed on the [[garden:bed-list|full bed list]] page
+once it is written.
+
+See also the [[garden:watering-rota|watering rota]].

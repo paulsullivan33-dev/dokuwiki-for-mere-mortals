@@ -1,0 +1,26 @@
+$ # garden:watering-rota was edited twice more with the edit helper.
+$ # Its Old Revisions page now lists every version, newest first (date + edit summary):
+2026/11/03 01:27	wording tidy
+2026/11/03 01:27	heat wave note
+2026/11/03 01:25	rota created
+$ # The diff between the two most recent versions, the changed line each way:
+before: Water early, before the heat. One full can per bed, two for tomatoes, three in a heat wave.
+after:  Water early, before the heat of the day. One full can per bed, two for tomatoes, three in a heat wave.
+$ # Full-text search needs the index. Normally a hidden tracker image in each
+$ # viewed page builds it; a script that never loads images must run the indexer:
+$ php wiki/bin/indexer.php | tail -2
+start indexing...
+start indexed.
+$ curl -s ".../doku.php?do=search&q=tomatoes"  # pages the search names:
+garden:beds:bed-1
+garden:plot-map
+garden:watering-rota
+$ # Recent Changes across the whole wiki (do=recent) lists, among others:
+committee:minutes
+garden:beds:bed-1
+garden:garden-sign.png
+garden:plot-map
+garden:watering-rota
+gardening:season-notes
+gardening:syntax-tour
+start

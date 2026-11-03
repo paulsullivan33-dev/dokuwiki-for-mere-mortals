@@ -1,0 +1,13 @@
+$ # Plugins arrive bundled (lib/plugins/) and are switched in the Extension Manager.
+$ # It keeps the on/off state in one line of conf/plugins.local.php. Before: no line for popularity.
+lines naming popularity: 0
+$ # Press the Disable button for the popularity plugin (POST fn[disable][popularity], admin session)
+disable POST -> HTTP 200
+$ grep popularity wiki/conf/plugins.local.php
+$plugins['popularity'] = 0;
+$ # The Extension Manager now describes the plugin as:
+extension plugin installed disabled" data-ext="popularity"
+$ # Press Enable again and the state line disappears (absence means on):
+enable POST -> HTTP 302
+lines naming popularity: 0
+extension plugin installed enabled" data-ext="popularity"
